@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6602B379-313C-4E10-8077-15DA3A7A0686}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlunderLoader</RootNamespace>
+    <AssemblyName>BlunderLoader</AssemblyName>
+    <TargetFrameworkVersion>v2.1</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="BepInEx.Core" />
+    <Reference Include="BepInEx.IL2CPP" />
+    <Reference Include="Cinemachine" />
+    <Reference Include="Il2Cppmscorlib" />
+    <Reference Include="Il2CppSystem.Core" />
+    <Reference Include="MT.FGClient" />
+    <Reference Include="netstandard" />
+    <Reference Include="ParsingUtils_Runtime" />
+    <Reference Include="TheMultiplayerGuys.FGCommon" />
+    <Reference Include="TheMultiplayerGuys.Utility" />
+    <Reference Include="UnhollowerBaseLib" />
+    <Reference Include="Unity.Addressables" />
+    <Reference Include="Unity.ResourceManager" />
+    <Reference Include="UnityEngine.AssetBundleModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+    <Reference Include="UnityEngine.IMGUIModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.PhysicsModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.VideoModule" />
+    <Reference Include="Wushu.LevelEditor.Runtime" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlunderLoaderManager.cs" />
+    <Compile Include="CMSTools.cs" />
+    <Compile Include="Fixes\InstantiatedObject.cs" />
+    <Compile Include="Fixes\RespawningTile.cs" />
+    <Compile Include="Fixes\Wormholes.cs" />
+    <Compile Include="HarmonyPatches\BlastBallsPatches.cs" />
+    <Compile Include="HarmonyPatches\GeneralPatches.cs" />
+    <Compile Include="HarmonyPatches\ObstaclesPatches.cs" />
+    <Compile Include="HarmonyPatches\ServerPatches.cs" />
+    <Compile Include="HarmonyPatches\WormholesPatch.cs" />
+    <Compile Include="J_\zU_.cs" />
+    <Compile Include="LoaderData.cs" />
+    <Compile Include="LoaderTools.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="MyPluginInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
